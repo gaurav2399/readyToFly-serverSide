@@ -116,7 +116,8 @@ app.delete('/destination/:id', function (req, res) {
 app.get('/', (req, res) => res.send('Welcome! You are all set to go!'))
 
 // Configure server 
-var server = app.listen(9000, '127.0.0.1', function (req, res) {
+const port=process.env.PORT||9000
+var server = app.listen(port, function (req, res) {
 
     var host = server.address().address
     var port = server.address().port
