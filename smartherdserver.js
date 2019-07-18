@@ -117,11 +117,7 @@ app.get('/', (req, res) => res.send('Welcome! You are all set to go!'))
 
 // Configure server 
 const port=process.env.PORT||9000
-var server = app.listen(port, function (req, res) {
-
-    var host = server.address().address
-    var port = server.address().port
-
-    console.log(`Server running at http://${host}:${port}/`);
+var server = app.listen(port, () => {
+    console.log("server")
 })
 
